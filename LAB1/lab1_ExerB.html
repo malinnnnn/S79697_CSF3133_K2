@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Campus Coding Club</title>
+</head>
+<body>
+
+    <!-- 
+      Error 1 (Line 1): Missing <!DOCTYPE html> declaration.
+      Error 2 (Line 3): Missing closing tag </title> (or order was inverted/missing).
+      Error 3 (Line 7): Mismatched tags; opened with <h1> but closed with </h2>. Changed to <h1>Welcome to Campus Coding Club</h1>.
+      Error 4 (Line 8): Incorrect nesting; <strong> and <em> tags closed in reverse order (</strong></em> instead of </em></strong>).
+      Error 5 (Line 9): Mismatched tags; opened with <h2> but closed with </h2> missing (written as Our Activities<h2> instead of </h2>).
+      Error 6 (Line 10): Incorrect list tag pairing; opened with <ul> but closed with </ol> on Line 14. Changed to <ul>.
+      Error 7 (Line 11): Missing closing tag </li> for "Weekly coding sessions".
+      Error 8 (Line 15): Missing quotes around the URL attribute (href=www.umt.edu.my). Also missing "https://" protocol for a valid external URL.
+      Error 9 (Line 15): Redundant trailing broken anchor closing tag (</a>a>).
+      Error 10 (Line 16): Missing mandatory "alt" attribute for the <img> tag.
+    -->
+
+    <!-- Navigation Section -->
+    <nav>
+        <a href="lab1_ExerB.html">Home</a> | <a href="contact.html">Contact Us</a>
+    </nav>
+
+    <h1>Welcome to Campus Coding Club</h1>
+    
+    <p>We meet every <strong><em>Wednesday</em></strong> at Lab 3.</p>
+    
+    <h2>Our Activities</h2>
+    <ul>
+        <li>Weekly coding sessions</li>
+        <li>Hackathon</li>
+        <li>Web design workshop</li>
+    </ul>
+    
+    <!-- Advisor Quote Section -->
+    <blockquote>
+        <p>"Coding is the closest thing we have to a superpower in the modern world. Join us to build the future!" - Club Advisor</p>
+    </blockquote>
+
+    <p>Visit our university: <a href="https://umt.edu.my">UMT Website</a></p>
+    
+    <p><img src="club.jpg" alt="Campus Coding Club Group Photo"></p>
+    
+    <footer>
+        <p>Copyright (c) 2026 Campus Coding Club &amp; Friends</p>
+    </footer>
+
+</body>
+</html>
