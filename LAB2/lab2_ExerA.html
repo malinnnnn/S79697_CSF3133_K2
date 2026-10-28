@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Faculty of Computing 2026</title>
+    <style>
+        /* Replaces the obsolete border="1" attribute to pass W3C validation cleanly */
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 6px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ========================================================================= -->
+    <!-- 1. SEMANTIC STRUCTURE: HEADER & NAVIGATION                                -->
+    <!-- ========================================================================= -->
+    <header>
+        <h1>Faculty Of Computing 2026</h1>
+        <p>Code the Future: Innovate, Collaborate, and Build Today!</p>
+    </header>
+
+    <nav>
+        <a href="#about">About the Event</a> | 
+        <a href="#schedule">Event Schedule</a> | 
+        <a href="#register">Registration</a>
+    </nav>
+
+    <!-- ========================================================================= -->
+    <!-- 1. SEMANTIC STRUCTURE: ABOUT THE EVENT SECTION                            -->
+    <!-- ========================================================================= -->
+    <section id="about">
+        <h2>About the Event</h2>
+        
+        <!-- First Speaker/Activity Article -->
+        <article>
+            <h3>Keynote Speaker: Dr. Harith Iqbal</h3>
+            <p>Dr. Harith will share modern insights on distributed ledger technologies and cloud infrastructure automation strategies for rapid prototyping.</p>
+        </article>
+
+        <!-- Second Speaker/Activity Article -->
+        <article>
+            <h3>Main Activity: Rapid Ideation Sprint</h3>
+            <p>Teams will work closely with industry mentors to pitch, design, and implement functional software prototypes answering real-world sustainability challenges.</p>
+        </article>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 2. EVENT SCHEDULE TABLE SECTION                                           -->
+    <!-- ========================================================================= -->
+    <section id="schedule">
+        <h2>Event Schedule</h2>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Activity</th>
+                    <th>Venue</th>
+                    <th>Person in Charge</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Row 1 -->
+                <tr>
+                    <td>08:30 AM - 09:30 AM</td>
+                    <td>Participant Check-In &amp; Breakfast</td>
+                    <td>Main Foyer</td>
+                    <td>Secretariat Team</td>
+                </tr>
+                <!-- Row 2 -->
+                <tr>
+                    <td>09:30 AM - 10:30 AM</td>
+                    <td>Opening Ceremony &amp; Team Formation</td>
+                    <td>Main Hall</td>
+                    <td>Prof. Ahmad</td>
+                </tr>
+                <!-- Row 3 (Rowspan used for Venue across two consecutive sessions) -->
+                <tr>
+                    <td>10:30 AM - 12:00 PM</td>
+                    <td>Keynote: Modern Software Architecture</td>
+                    <td rowspan="2">Auditorium 1</td>
+                    <td>Dr. Harith Iqbal</td>
+                </tr>
+                <!-- Row 4 (Venue column skipped due to rowspan above) -->
+                <tr>
+                    <td>12:00 PM - 01:00 PM</td>
+                    <td>Mentorship Checkpoint &amp; Ideation Sprint</td>
+                    <td>Tech Mentors</td>
+                </tr>
+                <!-- Row 5 (Colspan used for Lunch Break) -->
+                <tr>
+                    <td>01:00 PM - 02:00 PM</td>
+                    <td colspan="3">Lunch Break &amp; Networking Session</td>
+                </tr>
+                <!-- Row 6 -->
+                <tr>
+                    <td>02:00 PM - 05:00 PM</td>
+                    <td>Hacking &amp; Code Development Phase</td>
+                    <td>Lab 4 &amp; Lab 5</td>
+                    <td>Mdm. Aminah</td>
+                </tr>
+                <!-- Row 7 -->
+                <tr>
+                    <td>05:00 PM - 06:30 PM</td>
+                    <td>Final Pitching &amp; Award Ceremony</td>
+                    <td>Main Hall</td>
+                    <td>Judging Panel</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 3. REGISTRATION FORM SECTION                                              -->
+    <!-- ========================================================================= -->
+    <section id="register">
+        <h2>Event Registration Form</h2>
+        
+        <form action="register.html" method="post">
+            
+            <!-- Text Inputs with Matching Labels -->
+            <p>
+                <label for="fullname">Full Name:</label><br>
+                <input type="text" id="fullname" name="fullname" required>
+            </p>
+
+            <p>
+                <label for="matric">Matric Number:</label><br>
+                <input type="text" id="matric" name="matric" required>
+            </p>
+
+            <p>
+                <label for="email">E-mail Address:</label><br>
+                <input type="email" id="email" name="email" required>
+            </p>
+
+            <!-- Radio Buttons (Shared Name Element) -->
+            <p>
+                <label>Year of Study:</label><br>
+                <input type="radio" id="year1" name="year_of_study" value="Year 1">
+                <label for="year1">Year 1</label><br>
+                
+                <input type="radio" id="year2" name="year_of_study" value="Year 2">
+                <label for="year2">Year 2</label><br>
+                
+                <input type="radio" id="year3" name="year_of_study" value="Year 3">
+                <label for="year3">Year 3</label><br>
+                
+                <input type="radio" id="year4" name="year_of_study" value="Year 4">
+                <label for="year4">Year 4</label>
+            </p>
+
+            <!-- Checkboxes (At least 3 choices) -->
+            <p>
+                <label>Select Sessions to Join:</label><br>
+                <input type="checkbox" id="session-keynote" name="sessions" value="Keynote">
+                <label for="session-keynote">Keynote Session</label><br>
+                
+                <input type="checkbox" id="session-sprint" name="sessions" value="Ideation Sprint">
+                <label for="session-sprint">Ideation Sprint</label><br>
+                
+                <input type="checkbox" id="session-hacking" name="sessions" value="Hacking Phase">
+                <label for="session-hacking">Hacking Phase</label>
+            </p>
+
+            <!-- Drop-down List (At least 4 options) -->
+            <p>
+                <label for="programme">Programme / Faculty:</label><br>
+                <select id="programme" name="programme">
+                    <option value="cs">Bachelor of Computer Science</option>
+                    <option value="se">Bachelor of Software Engineering</option>
+                    <option value="it">Bachelor of Information Technology</option>
+                    <option value="is">Bachelor of Information Systems</option>
+                </select>
+            </p>
+
+            <!-- Submit Button -->
+            <p>
+                <input type="submit" value="Register Now">
+            </p>
+
+        </form>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 1. SEMANTIC STRUCTURE: FOOTER                                             -->
+    <!-- ========================================================================= -->
+    <footer>
+        <p>Organised by the Faculty Engineering &amp; Technology Committee. &copy; 2026 All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
+
