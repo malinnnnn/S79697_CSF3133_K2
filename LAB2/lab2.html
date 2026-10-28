@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Profile</title>
+</head>
+<body>
+
+    <!-- Task 3: Semantic Header -->
+    <header>
+        <h1>Personal Profile</h1>
+    </header>
+
+    <!-- Task 3: Semantic Navigation -->
+    <nav>
+        <a href="#profile">Profile</a> | <a href="#form">Form</a>
+    </nav>
+
+    <!-- Task 3: First Semantic Section -->
+    <section id="profile">
+        <!-- Task 3: Semantic Article -->
+        <article>
+            <h2>About Me</h2>
+            <!-- Task 1: Table with at least 3 rows and 3 columns -->
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Occupation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>John Doe</td>
+                        <td>22</td>
+                        <td>Student</td>
+                    </tr>
+                    <tr>
+                        <td>Jane Smith</td>
+                        <td>25</td>
+                        <td>Web Developer</td>
+                    </tr>
+                    <tr>
+                        <td>Alex Jones</td>
+                        <td>30</td>
+                        <td>Designer</td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+    </section>
+
+    <!-- Task 3: Second Semantic Section -->
+    <section id="form">
+        <h2>Contact & Interests</h2>
+        <!-- Task 2: Simple Form with matching label 'for' and input 'id' -->
+        <form action="#" method="post">
+            
+            <!-- Text Inputs (Name & Email) -->
+            <p>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="userName" required>
+            </p>
+            
+            <p>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="userEmail" required>
+            </p>
+
+            <!-- Radio Buttons (Gender) -->
+            <p>
+                <label>Gender:</label><br>
+                <input type="radio" id="gender-male" name="gender" value="male">
+                <label for="gender-male">Male</label><br>
+                
+                <input type="radio" id="gender-female" name="gender" value="female">
+                <label for="gender-female">Female</label>
+            </p>
+
+            <!-- Checkboxes (Favorite Hobbies) -->
+            <p>
+                <label>Favorite Hobbies:</label><br>
+                <input type="checkbox" id="hobby-coding" name="hobbies" value="coding">
+                <label for="hobby-coding">Coding</label><br>
+                
+                <input type="checkbox" id="hobby-reading" name="hobbies" value="reading">
+                <label for="hobby-reading">Reading</label><br>
+                
+                <input type="checkbox" id="hobby-gaming" name="hobbies" value="gaming">
+                <label for="hobby-gaming">Gaming</label>
+            </p>
+
+            <!-- Submit Button -->
+            <p>
+                <button type="submit">Submit</button>
+            </p>
+
+        </form>
+    </section>
+
+    <!-- Task 3: Semantic Footer -->
+    <footer>
+        <p>&copy; 2026 Your Name</p>
+    </footer>
+
+</body>
+</html>
