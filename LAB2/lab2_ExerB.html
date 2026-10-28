@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Course Feedback</title>
+    <style>
+        /* Menggantikan atribut border="1" yang usang supaya lulus W3C Validator tanpa amaran */
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ========================================================================= -->
+    <!-- PART 1: LIST OF IDENTIFIED AND CORRECTED ERRORS                           -->
+    <!-- ========================================================================= -->
+    <!-- 
+        Error 1 (Line 9): Closing </head> tag inside <header> block instead of </header>.
+        Error 2 (Line 20): Mismatched table cell tags, using opening <td> and closing </td> for a header row instead of <th> and </th>.
+        Error 3 (Line 28): Incorrect colspan value (colspan="3" breaks the 3-column table structure; row only has 2 cells).
+        Error 4 (Line 29): Missing closing </td> tag for "Tables and Forms".
+        Error 5 (Line 32): Missing closing </td> tag for "Semantic HTML" and data cell shifted due to missing columns.
+        Error 6 (Line 39): The 'for' attribute in <label for="name"> does not match the input id (input has id="fullname").
+        Error 7 (Line 41): The <label> for Overall Rating has a typo in the closing tag (</label> written as :</label>).
+        Error 8 (Line 42 & 44): Radio buttons do not share the same 'name' attribute (name="good" vs name="poor"), allowing multiple selections.
+        Error 9 (Line 43 & 45): The 'for' attributes in labels do not match the radio buttons' id attributes.
+        Error 10 (Line 46): Checkbox has a typo in the id attribute (id="lab" but label for="labs").
+        Error 11 (Line 52): Bare ampersand symbol used in "&copy 2026", missing a semicolon (;).
+    -->
+
+    <!-- ========================================================================= -->
+    <!-- HEADER & NAVIGATION                                                       -->
+    <!-- ========================================================================= -->
+    <header>
+        <h1>CSF3133 Course Feedback</h1>
+    </header>
+
+    <nav>
+        <a href="#results">Results</a> | 
+        <a href="#form">Feedback Form</a> | 
+        <a href="#comments">Student Comments</a>
+    </nav>
+
+    <!-- ========================================================================= -->
+    <!-- SECTION: RESULTS (FEEDBACK SUMMARY TABLE)                                 -->
+    <!-- ========================================================================= -->
+    <section id="results">
+        <h2>Feedback Summary</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Week</th>
+                    <th>Topic</th>
+                    <th>Rating</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Introduction to HTML</td>
+                    <td>4.5</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Tables and Forms</td>
+                    <td>4.2</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Semantic HTML</td>
+                    <td>4.0</td>
+                </tr>
+                <!-- Part 2 (No. 5): Added Week 4 & 5 rows with rowspan="2" for Topic -->
+                <tr>
+                    <td>4</td>
+                    <td rowspan="2">Mini Project</td>
+                    <td>4.7</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>4.9</td>
+                </tr>
+                <!-- Part 2 (No. 5): Added Average Rating row with colspan="2" -->
+                <tr>
+                    <td colspan="2">Average Rating</td>
+                    <td>4.46</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- SECTION: FEEDBACK FORM                                                    -->
+    <!-- ========================================================================= -->
+    <section id="form">
+        <h2>Give Your Feedback</h2>
+        <form action="submit_feedback.php" method="post">
+            
+            <p>
+                <label for="fullname">Name:</label><br>
+                <input type="text" id="fullname" name="name" required>
+            </p>
+
+            <!-- Part 2 (No. 6): Added E-mail text input with matching label -->
+            <p>
+                <label for="email">E-mail Address:</label><br>
+                <input type="email" id="email" name="email" required>
+            </p>
+            
+            <!-- Radio Buttons: Shared name="rating" to ensure mutual exclusivity -->
+            <p>
+                <label>Overall rating:</label><br>
+                <input type="radio" id="good" name="rating" value="good">
+                <label for="good">Good</label><br>
+                
+                <!-- Part 2 (No. 6): Added "Average" radio option -->
+                <input type="radio" id="average" name="rating" value="average">
+                <label for="average">Average</label><br>
+                
+                <input type="radio" id="poor" name="rating" value="poor">
+                <label for="poor">Poor</label>
+            </p>
+
+            <!-- Part 2 (No. 6): Added 3 checkboxes for practice topics -->
+            <p>
+                <label>Topics I want more practice on:</label><br>
+                <input type="checkbox" id="practice-tables" name="practice_topics" value="Tables">
+                <label for="practice-tables">HTML Tables</label><br>
+                
+                <input type="checkbox" id="practice-forms" name="practice_topics" value="Forms">
+                <label for="practice-forms">HTML Forms</label><br>
+                
+                <input type="checkbox" id="practice-semantics" name="practice_topics" value="Semantics">
+                <label for="practice-semantics">Semantic Elements</label>
+            </p>
+
+            <!-- Part 2 (No. 6): Added <select> dropdown with 3 options -->
+            <p>
+                <label for="section-group">Section / Group:</label><br>
+                <select id="section-group" name="section_group">
+                    <option value="group1">Section 1 / Group A</option>
+                    <option value="group2">Section 1 / Group B</option>
+                    <option value="group3">Section 2 / Group A</option>
+                </select>
+            </p>
+
+            <p>
+                <input type="checkbox" id="labs" name="lab" value="yes">
+                <label for="labs">I attended all labs</label>
+            </p>
+
+            <p>
+                <input type="submit" value="Submit">
+            </p>
+        </form>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- PART 2 (No. 7): NEW SECTION - STUDENT COMMENTS                            -->
+    <!-- ========================================================================= -->
+    <section id="comments">
+        <h2>Student Comments</h2>
+        
+        <article>
+            <h3>Ali Bin Abu</h3>
+            <p>The practical sessions for Week 2 were challenging but extremely helpful for understanding input handling and validation methods.</p>
+        </article>
+
+        <article>
+            <h3>Siti Nurhaliza</h3>
+            <p>I really enjoyed working on the Mini Project during Weeks 4 and 5. It allowed us to combine semantic layout practices with actual data collection components.</p>
+        </article>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- FOOTER                                                                    -->
+    <!-- ========================================================================= -->
+    <footer>
+        <p>Copyright &copy; 2026 CSF3133</p>
+    </footer>
+
+</body>
+</html>
