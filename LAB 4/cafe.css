@@ -1,0 +1,169 @@
+/* General Page Layout */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fcfaf7;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #4a2c2a;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+section {
+    width: 90%;
+    max-width: 850px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #e0d6cc;
+    border-radius: 6px;
+}
+
+h2 {
+    color: #4a2c2a;
+    border-bottom: 2px solid #d4a373;
+    padding-bottom: 5px;
+}
+
+/* Navigation Bar Styles (Moved from internal CSS and extended in Part 2, Step 5) */
+/* Fixed Error 2: Changed 'list-style-type: no;' to 'list-style-type: none;' */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #6f4e37;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    display: block;
+    background-color: #6f4e37;
+    color: #ffffff;
+    padding: 14px 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Link States for Navigation Bar */
+nav ul li a:link {
+    color: #ffffff;
+}
+
+nav ul li a:visited {
+    color: #f5ebe0;
+}
+
+nav ul li a:hover {
+    background-color: #d4a373;
+    color: #2b1810;
+}
+
+nav ul li a:active {
+    background-color: #bc6c25;
+    color: #ffffff;
+}
+
+/* Menu Item Cards & Old Price Promotion (Part 2, Step 6) */
+.item {
+    background-color: #fdf8f2;
+    border-left: 4px solid #6f4e37;
+    padding: 12px 15px;
+    margin-bottom: 12px;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #7f8c8d;
+    margin-right: 6px;
+}
+
+/* Responsive Video & Figure Caption (Part 2, Step 7) */
+figure {
+    margin: 0;
+    text-align: center;
+}
+
+video {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #4a2c2a;
+    border-radius: 4px;
+}
+
+figcaption {
+    font-style: italic;
+    color: #555555;
+    margin-top: 8px;
+    font-size: 0.95em;
+}
+
+/* Customer Feedback Form Styling (Part 2, Step 8) */
+.feedback-form {
+    background-color: #f9f3eb;
+    padding: 20px;
+    border: 1px solid #d4a373;
+    border-radius: 6px;
+    width: 90%;
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.feedback-form input[type="text"],
+.feedback-form input[type="email"] {
+    width: 95%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+}
+
+.btn-submit {
+    background-color: #4a2c2a;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background-color: #6f4e37;
+}
+
+/* Footer Styling (Part 2, Step 9) */
+footer {
+    background-color: #4a2c2a;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+footer p {
+    color: #ffffff;
+    text-align: center;
+}
+
+footer a:link,
+footer a:visited {
+    color: #f5ebe0;
+}
+
+footer a:hover {
+    color: #d4a373;
+}
