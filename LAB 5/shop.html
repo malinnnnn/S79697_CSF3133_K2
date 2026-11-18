@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Campus Bookstore</title>
+  <!-- Google Fonts: Merriweather for headings and Roboto for body text -->
+  <link href="https://googleapis.com" rel="stylesheet">
+  <link rel="stylesheet" href="shop.css">
+  <style>
+    h1 {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- 
+    Error 1 (shop.html, Line 6): Used css?family= instead of css2?family= for wght@400;700.
+    Error 2 (shop.html, Line 7): Typo rel="stylesheets" instead of rel="stylesheet".
+    Error 3 (shop.html, Lines 10-12): <style> tag was placed inside <body> instead of <head>.
+    Error 4 (shop.html, Line 18): Inline CSS used '=' instead of ':' (color=#1B4F72).
+    Error 5 (shop.html, Line 20): Table id="product" did not match CSS selector #products.
+    Error 6 (shop.css, Line 2): Misspelled font-family as 'Robotto' instead of 'Roboto'.
+    Error 7 (shop.css, Line 4): Missing hyphen in 'no repeat' (should be 'no-repeat').
+    Error 8 (shop.css, Line 5): Misspelled property 'bacground-position' instead of 'background-position'.
+    Error 9 (shop.css, Line 18): Used 'display: inline' instead of 'display: block' for nav links.
+    Error 10 (shop.css, Line 23): Invalid selector 'li:a:hover' (should be 'li a:hover').
+    Error 11 (shop.css, Line 26): Invalid value 'collapsed' for border-collapse (should be 'collapse').
+    Error 12 (shop.css, Line 34): Used ':nth-child(2)' instead of ':nth-child(even)' for alternating rows.
+    Error 13 (shop.css, Line 37): Invalid pseudo-class ':hovered' instead of ':hover'.
+    Error 14 (shop.css, Line 45): Missing semicolon after 'background-color: #f1f1f1'.
+  -->
+
+  <header>
+    <h1 style="color: #ffffff;">Campus Bookstore</h1>
+    <p>Your one-stop shop for academic success</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a class="active" href="#home">Home</a></li>
+      <li><a href="#books">Books</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <p>Textbooks, stationery and more for every student.</p>
+
+    <table id="products">
+      <tr>
+        <th>Item</th>
+        <th>Category</th>
+        <th class="price">Price (RM)</th>
+      </tr>
+      <tr>
+        <td>Web Design Basics</td>
+        <td>Textbook</td>
+        <td class="price">45.00</td>
+      </tr>
+      <tr>
+        <td>A4 Notebook</td>
+        <td>Stationery</td>
+        <td class="price">6.50</td>
+      </tr>
+      <tr>
+        <td>USB Drive 32GB</td>
+        <td>Gadget</td>
+        <td class="price">25.00</td>
+      </tr>
+      <tr>
+        <td>Highlighter Set</td>
+        <td>Stationery</td>
+        <td class="price">9.90</td>
+      </tr>
+    </table>
+  </main>
+
+  <footer>&copy; 2026 Campus Bookstore</footer>
+</body>
+</html>
