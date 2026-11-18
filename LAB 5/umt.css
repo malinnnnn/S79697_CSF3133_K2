@@ -1,0 +1,135 @@
+/* General Page & Body Styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f7f9;
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+    background-color: #3b1e54; /* UMT Purple */
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-size: 1rem;
+    font-weight: 300;
+    color: #f39c12; /* UMT Orange Accent */
+}
+
+/* Navigation Bar Styling */
+nav {
+    background-color: #241136;
+    position: sticky;
+    top: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li a {
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 24px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover Effect for Navigation Links */
+nav ul li a:hover {
+    background-color: #f39c12;
+    color: #111111;
+}
+
+/* Main Content & Section Spacing */
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+section {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+    color: #3b1e54;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #f39c12;
+    padding-bottom: 8px;
+}
+
+h3 {
+    color: #3b1e54;
+    margin-top: 25px;
+    margin-bottom: 12px;
+}
+
+/* Paragraph Alignment and Spacing */
+article p {
+    text-align: justify;
+    margin-bottom: 16px;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #dddddd;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+thead {
+    background-color: #3b1e54;
+    color: #ffffff;
+}
+
+/* Alternating Row Colors */
+tbody tr:nth-child(even) {
+    background-color: #f2eef7;
+}
+
+/* Table Row Hover Effect */
+tbody tr:hover {
+    background-color: #fdebd0;
+    transition: background-color 0.2s ease;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #e2e8f0;
+    color: #4a5568;
+    text-align: center;
+    padding: 18px 10px;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    border-top: 1px solid #cbd5e1;
+}
+
